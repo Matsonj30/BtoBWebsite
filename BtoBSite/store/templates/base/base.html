@@ -13,12 +13,12 @@
     <div class ="menuContainer">
         <img src = "{% static 'images\BtoBLogo.jpg' %}" href="{% url 'home-page' %}" alt="Logo" class ="logo">
         <div class="linkBackground"> <a href ="" class = 'menuItem'>Home</a></div>
-        <div class="linkBackground"> <a href ="" class = 'menuItem'>Inventory</a> </div>
+        <div class="linkBackground"> <a href ="{% url 'partsPage' %}" class = 'menuItem'>Inventory</a> </div>
         <div class="linkBackground"> <a href ="" class = 'menuItem'>About Us</a> </div>
         <div class="linkBackground"> <a href ="" class = 'menuItem'>Contact</a> </div>
     </div>
-    <div class="map">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5301.324150063742!2d-117.13623221274925!3d56.03716212127862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5397b26007e99ad3%3A0xcf94dfed11485dcb!2sNampa%20Auto%20%26%20Farm%20Supply!5e0!3m2!1sen!2sca!4v1652140645883!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+    <div class ="searchBar">
+        
     </div>
     {% block body %}{% endblock %}
 </body>

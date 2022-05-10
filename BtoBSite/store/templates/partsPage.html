@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block site_css%}{% endblock %}
+
+{% block body %}
+    <h2>Parts List:</h2>
+    <div class = partsGrid>
+        {% for part_item in parts %}
+            <!-- Create an includes like in the meetups project with just lil squares?? -->
+        {% endfor %}
+    </div>
+    
+{% endblock %}
