@@ -31,7 +31,7 @@ h2{
     background-color: var(--darkRed);
 }
 .Img{
-    padding-top: 38px;
+    padding-top: 18px;
     width: 90%;
     height: 290px;
     padding-left: 5%;
@@ -40,4 +40,8 @@ h2{
 }
 .part-item p{
     padding: 0;
+}
+.isAvailableImg{
+    height: 30px;
+    width: 30px;
 }
