@@ -1,13 +1,14 @@
 :root{
     --white: blue;
     --red: rgb(235, 18, 18);
+    --darkRed:rgb(201, 82, 82);
     --gray: gray;
     --black: rgb(36, 35, 35);
 }
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(201, 82, 82);
+    background-color: var(--darkRed)
 }
 .menuContainer{
     width: 100%;
@@ -19,18 +20,19 @@ body{
     border: 3px solid black;
 }
 .linkBackground{
-    height: 101px;
+    border: 2px solid var(--red);
+    height: 40px;
     width: 150px;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: border 0.3s ;
     transform: translateX(-15px);
 }   
 .linkBackground:hover{
-    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
 }
 .menuItem{
-    Font-family: Consolas;
+    font-family: monospace;
     font-weight: bold;
     text-decoration: none;
     color: var(--black);

@@ -1,12 +1,14 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block site_css%}{% endblock %}
+{% block site_css%}
+    <link rel="stylesheet" href = "{% static 'styles/partsPage.css' %}">
+{% endblock %}
 
 {% block body %}
-    <h2>Parts List:</h2>
+    <h2>Check our inventory here</h2>
     <div class = partsGrid>
         {% for part_item in parts %}
-            <!-- Create an includes like in the meetups project with just lil squares?? -->
+            {% include 'includes/part-details.html' with title=part_item.title partID=part_item.partID isAvailable=part_item.isAvailable image=part_item.image.url %}
         {% endfor %}
     </div>
     
