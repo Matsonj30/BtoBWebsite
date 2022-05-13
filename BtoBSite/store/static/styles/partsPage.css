@@ -9,6 +9,7 @@
     margin:0;
     padding:0;
 }
+
 h2{
     font-family: monospace;
     font-weight: bold;
@@ -16,32 +17,52 @@ h2{
     font-size: 45px;
     padding: 10px;
 }
+.headersContainer{
+    display: flex;
+}
+.headersContainer h2{
+    
+}
+.filter{
+  width: 25%;
+}
+li{
+   font-size: 25px;
+   padding: 10px;
+}
 .partsGrid{
-    margin: auto;
+    padding: 1px;
+    /* margin-left: 25%; */
     display: grid;
-    grid-gap: 10px;
-    grid-template-rows: repeat(5, 450px);
+    grid-gap: 5px;
+    grid-template-rows: repeat(5, 410px);
     grid-template-columns: repeat(4, 300px);
     max-width: 1230px;
-    background-color: var(--darkRed);
+    background-color: white;
+    flex:2;
    
 }
 .part-item{
-    border: 2px solid black;
-    background-color: var(--darkRed);
+    border: 1px solid rgb(230, 230, 230);
+    background-color: white;
+   border-radius: 5px;
 }
-.Img{
-    padding-top: 18px;
-    width: 90%;
-    height: 290px;
-    padding-left: 5%;
-    justify-self: center;
-    margin-top: 35px;
-}
-.part-item p{
-    padding: 0;
+
+.availabilityContainer{
+    display: flex;
+    padding-top: 10px;
+    
 }
 .isAvailableImg{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
 }
+.Img{
+    width: 90%;
+    height: 240px;
+    padding-left: 5%;
+    justify-self: center;
+    margin-top: 55px;
+}
+

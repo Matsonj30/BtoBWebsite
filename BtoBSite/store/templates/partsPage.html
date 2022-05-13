@@ -5,11 +5,25 @@
 {% endblock %}
 
 {% block body %}
-    <h2>Check our inventory here</h2>
-    <div class = partsGrid>
-        {% for part_item in parts %}
-            {% include 'includes/part-details.html' with title=part_item.title partID=part_item.partID isAvailable=part_item.isAvailable image=part_item.image.url %}
-        {% endfor %}
+    <div class = headersContainer>
+        <h2>Filter</h2>
+        <h2>Current Inventory</h2>
+    </div>
+    <div class="headersContainer">
+        <div class="filter">
+            <ol>
+                <li>Wipers</li>
+                <li>Fan Belts</li>
+                <li>Oil Filters</li>
+                <li>Tires</li>
+                <li>Batteries</li>
+            </ol>
+        </div>
+        <div class = partsGrid>
+            {% for part_item in parts %}
+                {% include 'includes/part-details.html' with title=part_item.title partID=part_item.partID isAvailable=part_item.isAvailable image=part_item.image.url %}
+            {% endfor %}
+        </div>
     </div>
     
 {% endblock %}
