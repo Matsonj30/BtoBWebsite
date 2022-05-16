@@ -17,18 +17,29 @@ h2{
     font-size: 45px;
     padding: 10px;
 }
+input{
+    width: 25px;
+    height: 25px;
+}
+#currentInv{
+    padding-left: 310px;
+}
 .headersContainer{
     display: flex;
 }
-.headersContainer h2{
-    
+.headersTitles{
+    display: flex;
 }
 .filter{
   width: 25%;
 }
+.filterContent{
+    margin-left: 10px;
+}
 li{
    font-size: 25px;
    padding: 10px;
+   list-style-type: none;
 }
 .partsGrid{
     padding: 1px;
@@ -45,9 +56,12 @@ li{
 .part-item{
     border: 1px solid rgb(230, 230, 230);
     background-color: white;
-   border-radius: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
 }
-
+.part-item:hover{
+    transform: scale(1.05);
+}
 .availabilityContainer{
     display: flex;
     padding-top: 10px;

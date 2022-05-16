@@ -8,15 +8,16 @@
     <title>Nampa Auto & Farm Supply</title>
     <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     {% block site_css%}{% endblock %}
-
+ 
 </head>
 <body>
     <div class ="menuContainer">
-        <img src = "{% static 'images\BtoBLogo.jpg' %}" href="{% url 'home-page' %}" alt="Logo" class ="logo">
-        <div class="linkBackground"> <a href ="" class = 'menuItem'>Home</a></div>
-        <div class="linkBackground"> <a href ="{% url 'partsPage' %}" class = 'menuItem'>Inventory</a> </div>
-        <div class="linkBackground"> <a href ="" class = 'menuItem'>About Us</a> </div>
-        <div class="linkBackground"> <a href ="" class = 'menuItem'>Contact</a> </div>
+        <a href = "{% url 'home-page' %}"><img src ="{% static 'images\BtoBLogo.jpg' %}" alt="Logo" class ="logo"></a>
+
+        <div class="linkBackground"> <a href = "{% url 'home-page' %}" class = 'menuItem'>HOME</a></div>
+        <div class="linkBackground"> <a href ="{% url 'partsPage'%}" class = 'menuItem'>INVENTORY</a> </div>
+        <div class="linkBackground"> <a href ="" class = 'menuItem'>ABOUT US</a> </div>
+        <div class="linkBackground"> <a href ="" class = 'menuItem'>CONTACT</a> </div>
     </div>
     <div class ="searchBar">
         
