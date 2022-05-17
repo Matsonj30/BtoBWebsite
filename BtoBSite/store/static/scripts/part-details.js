@@ -1,5 +1,6 @@
 function initiate(){
     isAvailable = document.getElementsByClassName('isAvailableImg');
+  
     for(i = 0; i<isAvailable.length; i+=1){
         if(isAvailable[i].alt == "True"){ //If available, display check mark
             isAvailable[i].src="/static/images/greenCheck.png";
@@ -9,6 +10,9 @@ function initiate(){
 
         }//else
     }//for
+
+
+
     initiateFilters()
 
 }
@@ -16,9 +20,10 @@ function initiate(){
 query that filters by the content checked off */
 function initiateFilters(){
     filterBoxes = document.getElementsByClassName("filterContent")
+    url = window.location.href
     for(i=1; i<filterBoxes.length; i+=1){
         filterBoxes[i].addEventListener('click', function(){
-            document.location.href = "parts/" + this.textContent.trim()
+            window.location = ("http://localhost:8000/home/parts/" + this.textContent.trim())
         })
     }//for
 }
