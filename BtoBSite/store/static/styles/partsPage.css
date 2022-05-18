@@ -45,7 +45,7 @@ li{
     padding: 1px;
     /* margin-left: 25%; */
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 7px;
     grid-template-rows: repeat(5, 410px);
     grid-template-columns: repeat(4, 300px);
     max-width: 1230px;
