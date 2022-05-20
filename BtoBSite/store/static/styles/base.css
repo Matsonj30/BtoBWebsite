@@ -6,12 +6,12 @@
     --black: rgb(36, 35, 35);
 }
 *{
-    font-family: 'Anton', serif;;
+    font-family: 'Anton', serif;
 }
 body{
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgb(230, 228, 228);
 }
 .menuContainer{
     width: 100%;
