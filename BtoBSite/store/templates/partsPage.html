@@ -5,25 +5,33 @@
 {% endblock %}
 
 {% block body %}
-    <div class = headersTitles>
-        <h2 class="filterContent">Filter</h2>
-        <h2 id="currentInv">Current Inventory</h2>
+     
+<!--     <div class= headersContainer> -->
+<div class = contentContainer> 
+    <div class="filter">
+        <h4 class = filterCategory>Part Type<h4>
+        <ol>
+            {% for category in categories %}
+            <li class="filterContent"> <input type="checkbox"> {{category.name}}</li>
+            {% endfor %}
+        </ol>
+        <h4 class = filterCategory>Brand<h4></h4>
+        <ol>
+            {% for brand in brands %}
+            <li class="filterContent"> <input type="checkbox"> {{brand.brand}}</li>
+            {% endfor %}
+        </ol>
     </div>
-    <div class= headersContainer>
-        <div class="filter">
-            <ol>
-                {% for category in categories %}
-                <li class="filterContent"> <input type="checkbox"> {{category.name}}</li>
-                {% endfor %}
-                <btn class = resetFilter>Reset</btn>
-            </ol>
-        </div>
+    <div class = "inventory">
+        <h2 id="currentInv">Current Inventory</h2>
         <div class = partsGrid>
             {% for part_item in parts %}
                 {% include 'includes/part-details.html' with title=part_item.title partID=part_item.partID isAvailable=part_item.isAvailable image=part_item.image.url  %}
             {% endfor %}
         </div>
     </div>
+</div>     
+   <!--  </div> -->
     
 {% endblock %}
 {% block site_JS%}

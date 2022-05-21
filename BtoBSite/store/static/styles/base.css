@@ -1,9 +1,10 @@
 :root{
-    --white: blue;
+    --white: white;
     --red: rgb(235, 18, 18);
     --darkRed:rgb(201, 82, 82);
-    --gray: gray;
+    --gray: rgb(243, 243, 243);
     --black: rgb(36, 35, 35);
+    --darkGray: rgb(48, 47, 47);
 }
 *{
     font-family: 'Anton', serif;
@@ -11,7 +12,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(230, 228, 228);
+    background-color: rgb(243, 243, 243);
 }
 .menuContainer{
     width: 100%;

@@ -21,7 +21,7 @@ query that filters by the content checked off */
 function initiateFilters(){
     filterBoxes = document.getElementsByClassName("filterContent")
     url = window.location.href
-    for(i=1; i<filterBoxes.length; i+=1){
+    for(i=0; i<filterBoxes.length; i+=1){
         filterBoxes[i].addEventListener('click', function(){
             window.location = ("http://localhost:8000/home/parts/" + this.textContent.trim())
         })
