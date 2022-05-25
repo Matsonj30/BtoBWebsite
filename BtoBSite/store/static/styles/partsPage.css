@@ -1,18 +1,21 @@
 :root{
-    --white: blue;
+    --white: white;
     --red: rgb(235, 18, 18);
     --darkRed:rgb(201, 82, 82);
-    --gray: gray;
+    --gray: rgb(243, 243, 243);
     --black: rgb(36, 35, 35);
-}
+    --darkGray: rgb(48, 47, 47);
+    --boldFont: 'Anton', serif;
+    --thinFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}   
 *{
     margin:0;
     padding:0;
+
 }
 
 h2{
-    font-family: monospace;
-    font-weight: bold;
+    font-family: var(--thinFont);
     font-size: 45px;
 }
 
@@ -20,9 +23,7 @@ input{
     width: 25px;
     height: 25px;
 }
-#currentInv{
-    /* padding-left: 310px; */
-}
+
 .headersContainer{
     display: flex;
 }
@@ -42,22 +43,26 @@ input{
 }
 .filterCategory{
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-family: var(--thinFont);
+    font-size: 25px;
+    margin-bottom: 5px;
 }
 
+.filter h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
 li{
    font-size: 25px;
    padding: 10px;
    list-style-type: none;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--thinFont);
 }
 .partsGrid{
     padding: 1px;
-    /* margin-left: 25%; */
     display: grid;
     grid-gap: 7px;
-    grid-template-rows: repeat(4, 410px);
+    grid-template-rows: repeat(3, 410px);
     grid-template-columns: repeat(4, 300px);
     max-width: 1230px;
     flex:2;
@@ -69,8 +74,14 @@ li{
     border-radius: 5px;
     transition: 0.3s ease-in;
 }
+.itemTitle{
+    font-size: 27px;
+}
 .part-item h1{
     letter-spacing: 1px;
+}
+.part-item p{
+    font-family: var(--thinFont);
 }
 .part-item:hover{
     transform: scale(1.05);

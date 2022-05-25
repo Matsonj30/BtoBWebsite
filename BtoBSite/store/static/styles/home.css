@@ -5,9 +5,11 @@
     --gray: rgb(243, 243, 243);
     --black: rgb(36, 35, 35);
     --darkGray: rgb(48, 47, 47);
-}
+    --boldFont: 'Anton', serif;
+    --thinFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}   
 *{
-    font-family: 'Anton', serif;
+    font-family: var(--boldFont);
     margin: 0;
     padding: 0;
 }
@@ -83,7 +85,7 @@ iframe{
     background-color: white;
     text-align: center;
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--thinFont);
 }
 .card img{
     width: 75%;
@@ -100,7 +102,7 @@ iframe{
     margin-top: 10px;
     color: var(--darkGray);
     font-weight:lighter;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:var(--thinFont);
 }
 .card5{
     border-right: 0px;
@@ -113,6 +115,6 @@ iframe{
     border-radius: 7%;
     border: none;
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--thinFont)
    
 }

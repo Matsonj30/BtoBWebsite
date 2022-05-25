@@ -20,24 +20,38 @@ def parts(request):
     })
 
 def filteredParts(request, category_chosen):
-    print(category_chosen)
+    categories = Category.objects.all()
+    brands = Brand.objects.all()
+    print(type(categories[0]))
+    print("_____________")
+    print(type(category_chosen))
+    for category in categories:
+        if category_chosen == str(category): #If true we are filtering by category, not brand
+            partsByType = Part.objects.filter(category__name = category_chosen) #to get foreign
+            #key attributes, you have to use underscores to get the field name of related fields accross models
+            return render(request, 'partsPage.html',{
+                'parts':partsByType,
+                'categories':categories,
+                'brands':brands,
+            })
+    #if did not filter by category, then we had to have by brand, this could go poorly if add
+    #more filtering options
+    partsByBrand = Part.objects.filter(brand__brand = category_chosen) 
+    return render(request, 'partsPage.html',{
+                'parts':partsByBrand,
+                'categories':categories,
+                'brands':brands,
+            })
    
-    partsByType = Part.objects.filter(category__name = category_chosen) #to get foreign
 
-    #key attributes, you have to use underscores to get the field name of related fields accross models
+    
         
-    """  partsByBrand = Brand.objects.filter(brand__name = category_chosen) """
+
     #request currently does not know what to do if use same function to go thru multiple
     # queries, as some values might not be found 
 
 
 
-    categories = Category.objects.all()
-    brands = Brand.objects.all()
+    
   
-    return render(request, 'partsPage.html',{
-        'parts':partsByType,
-        'categories':categories,
-        'brands':brands,
-    })
-   
+ 
