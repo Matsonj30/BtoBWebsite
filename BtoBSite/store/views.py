@@ -22,9 +22,7 @@ def parts(request):
 def filteredParts(request, category_chosen):
     categories = Category.objects.all()
     brands = Brand.objects.all()
-    print(type(categories[0]))
-    print("_____________")
-    print(type(category_chosen))
+    
     for category in categories:
         if category_chosen == str(category): #If true we are filtering by category, not brand
             partsByType = Part.objects.filter(category__name = category_chosen) #to get foreign

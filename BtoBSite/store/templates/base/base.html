@@ -32,8 +32,17 @@
     {% block site_JS%}{% endblock %}
 </body>
 <footer>
-    <p>Follow us on </p>
-    <img src ="{% static 'images\facebook.png' %}" alt="facebook">
-    <img src ="{% static 'images\twitter.png' %}" class="twitter" alt="twitter">
+    <p>Follow us!</p>
+    <div class="socialsContainer">
+        <div class =socialsContainer>
+            <a href="https://www.facebook.com/nampaautoandfarmsupply/" class="facebook"><img src ="{% static 'images\facebook.png' %}" alt="facebook"></a>
+            <p>www.facebook.com/nampaautoandfarmsupply/</p>
+        </div>
+        <div class="socialsContainer">
+            <img src ="{% static 'images\twitter.png' %}" class="twitter" alt="twitter">
+            <p>@NampaAutoAndFarmSupply</p>
+        </div>
+    </div>
+    
 </footer>
 </html>

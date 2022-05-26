@@ -31,13 +31,14 @@ h1{
     margin-left: 10px;
 }
 .services{
-    background: rgb(13,4,4);
-    background: linear-gradient(29deg, rgba(13,4,4,1) 0%, rgba(222,18,18,1) 35%, rgba(235,18,18,1) 50%, rgba(222,18,18,1) 65%, rgba(14,14,14,1) 100%);
-    
+   /*  background: rgb(13,4,4);
+    background: linear-gradient(29deg, rgba(13,4,4,1) 0%, rgba(222,18,18,1) 35%, rgba(235,18,18,1) 50%, rgba(222,18,18,1) 65%, rgba(14,14,14,1) 100%); */
+    background: var(--darkGray);
+    /* background-image: url("../images/partsImage.jpg"); */
     width: 100%;
     height: 315px;
     margin-top: 10px;
-    color: black;
+    color: white;
     letter-spacing: 1px;
     text-align: center;
     font-size: 20px;
@@ -47,11 +48,11 @@ h1{
 }
 
 .centerSchedule{
-    background: rgb(13,4,4);
-background: linear-gradient(159deg, rgba(13,4,4,1) 0%, rgba(222,18,18,1) 35%, rgba(235,18,18,1) 50%, rgba(223,18,18,1) 65%, rgba(14,14,14,1) 100%);
-
+   /*  background: rgb(13,4,4);
+    background: linear-gradient(159deg, rgba(13,4,4,1) 0%, rgba(222,18,18,1) 35%, rgba(235,18,18,1) 50%, rgba(223,18,18,1) 65%, rgba(14,14,14,1) 100%); */
+    background: var(--darkGray);
     width: 100%;
-    color: black;
+    color: white;
     height: 175px;
     text-align: center;  
     letter-spacing: 1px; 
