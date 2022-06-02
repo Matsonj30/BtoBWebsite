@@ -25,47 +25,49 @@ body{
    /*  border: 3px solid black; */
    box-shadow: 0px 2px 7px 0px gray;
    grid-template-rows: repeat(1, 80px);
-   grid-template-columns: repeat(10, 1fr);
+   grid-template-columns: repeat(5, 1fr);
    margin: auto;
    grid-template-areas:
-   "h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"
+   "h0 h1 h2 h3 h4"
 }
 .menuContainer p{
     font-size: 15px;
-    transform: translateX(-55px);
+    min-width: 110px;
 }
 .logo{
     width: 150px;
     height: 100px;
     align-self: center;
+    grid-area: h0;
 }
 .phoneLogo{
     width: 30px;
     height: 30px;
-    margin: auto;
-    grid-area: h9;
+    margin-right: 5px;
 }
 .pinLogo{
     width: 40px;
     height: 40px;
-    margin: auto;
-    grid-area: h7;
 }
 .home{
-    grid-area: h3;
+    grid-area: h1;
 }
 .inventory{
-    grid-area: h5;
+    grid-area: h2;
     margin: auto;
  
 }
-.location{
-    grid-area: h8;
-    align-self: center;
+.pinData{
+    display: flex; 
+    grid-area: h3;
+    align-items: center;
+    justify-content: center;
 }
-.number{
-    grid-area:h10;
-    align-self: center;
+.phoneData{
+    display: flex;
+    grid-area: h4;
+    align-items: center;
+    justify-content: center;
 }
 .linkBackground{
     border: 2px solid var(--red);
@@ -115,4 +117,22 @@ footer p{
 .socialsContainer{
     display: flex;
     align-items: center;
+}
+@media (max-width:775px){
+    .menuContainer{
+        grid-template-rows: repeat(2,60px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "h0 h1 h2"
+        "h9 h3 h4"
+    }
+    .logo{
+        margin-top: 7px;
+    }
+   .socialsContainer{
+       flex-direction: column;
+   }
+   footer{
+       height: auto;
+   }
 }

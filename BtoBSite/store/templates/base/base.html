@@ -20,10 +20,17 @@
         <a class="logo" href = "{% url 'home-page' %}"><img src ="{% static 'images\BtoBLogo.jpg' %}" alt="Logo" class ="logo"></a>
         <div class="linkBackground home"> <a href = "{% url 'home-page' %}" class = 'menuItem '>HOME</a></div>
         <div class="linkBackground inventory"> <a href ="{% url 'partsPage'%}" class = 'menuItem'>INVENTORY</a> </div>
-        <img class="pinLogo" src="{% static 'images\location_pin_002.jpg' %}">
-        <p class="location">9706 100 St, Nampa, AB</p>
-        <img class="phoneLogo" src="{% static 'images\phone.png' %}">
-        <p class="number">(780) 322-3798</p>
+        <div class = pinData>
+            <img class="pinLogo" src="{% static 'images\location_pin_002.jpg' %}">
+            <p class="location">9706 100 St, Nampa, AB</p>
+        </div>
+        <div class = phoneData>
+            <img class="phoneLogo" src="{% static 'images\phone.png' %}">
+            <p class="number">(780) 322-3798</p>
+        </div>
+          
+       
+        
     </div>
     <div class ="searchBar">
         
