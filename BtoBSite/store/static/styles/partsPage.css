@@ -104,3 +104,22 @@ li{
     margin-top: 55px;
 }
 
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translatey(-15px);
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: var(--thinFont);
+    display: block;
+    width: 30px;
+    text-align: center;
+}
+
+.pagination a:hover{
+    background-color: rgb(165, 161, 161);
+}

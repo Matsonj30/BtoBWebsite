@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Part, Category, Brand
+from django.core.paginator import Paginator
 # Create your views here.
 def homePage(request):
     return render(request, 'home.html',{
@@ -12,11 +13,16 @@ def parts(request):
     parts=Part.objects.all() #get all part objects in the DB
     categories = Category.objects.all()
     brands = Brand.objects.all()
+    
+    paginator = Paginator(parts, 1)
+    page = request.GET.get('page')
+    parts = paginator.get_page(page)
 
     return render(request, 'partsPage.html',{
         'parts':parts,
         'categories':categories,
         'brands': brands,
+        
     })
 
 def filteredParts(request, category_chosen):

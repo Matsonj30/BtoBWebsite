@@ -33,7 +33,28 @@
     </div>
 </div>     
    <!--  </div> -->
+
+
+
+<div class = pagination>
+    {% if parts.has_previous %}
+        <a href ="?page={{parts.previous_page_number}}">&laquo</a>
+    {% endif %}
     
+    
+    {% for page in parts.paginator.page_range %}
+        
+        <a href ="?page={{page}}" class="numbers">{{page}}</a>
+      
+        
+    {% endfor %}
+
+    {% if parts.has_next %}
+        <a href ="?page={{parts.next_page_number}}">&raquo</a>
+    {% endif %}
+</div>
+
+
 {% endblock %}
 {% block site_JS%}
     <script src="{% static 'scripts/part-details.js' %}"></script>
