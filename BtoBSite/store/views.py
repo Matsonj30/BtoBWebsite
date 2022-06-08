@@ -26,6 +26,7 @@ def parts(request):
     })
 
 def filteredParts(request, category_chosen):
+    print("filteredpage")
     categories = Category.objects.all()
     brands = Brand.objects.all()
     
@@ -48,8 +49,14 @@ def filteredParts(request, category_chosen):
             })
    
 
-    
-        
+def searchedValue(request):
+    print("HERE")
+    categories = Category.objects.all()
+    brands = Brand.objects.all()
+    return render(request, 'partsPage.html',{
+        'categories':categories,
+        'brands':brands,
+    })
 
     #request currently does not know what to do if use same function to go thru multiple
     # queries, as some values might not be found 

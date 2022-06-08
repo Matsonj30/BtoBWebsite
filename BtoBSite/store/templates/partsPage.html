@@ -5,8 +5,12 @@
 {% endblock %}
 
 {% block body %}
-     
-<!--     <div class= headersContainer> -->
+
+<form class="searchPart" method=POST action="{% url 'searchedPage' %}">
+    {% csrf_token %}
+    <input class="search" type="search" placeholder="Search">
+    <button>Search</button>
+</form>
 <div class = contentContainer> 
     <div class="filter">
         <h1 class = filterCategory>Filter By</h1>
