@@ -50,13 +50,24 @@ def filteredParts(request, category_chosen):
    
 
 def searchedValue(request):
-    print("HERE")
     categories = Category.objects.all()
     brands = Brand.objects.all()
-    return render(request, 'partsPage.html',{
+    
+    if request.method == "POST":
+        searched = request.POST.get("searched","") #make sure name='searched' is in the <input> element, NOT <form>
+        print("HI__________________")
+        print(searched)
+        parts = Part.objects.filter(title__contains=searched)
+        return render(request, 'partsPage.html',{
+            'parts':parts,
+            'categories':categories,
+            'brands':brands,
+        })
+    else:
+        return render(request, 'partsPage.html',{
         'categories':categories,
         'brands':brands,
-    })
+        })
 
     #request currently does not know what to do if use same function to go thru multiple
     # queries, as some values might not be found 

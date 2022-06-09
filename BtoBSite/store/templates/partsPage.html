@@ -2,15 +2,24 @@
 {% load static %}
 {% block site_css%}
     <link rel="stylesheet" href = "{% static 'styles/partsPage.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 {% endblock %}
 
 {% block body %}
 
-<form class="searchPart" method=POST action="{% url 'searchedPage' %}">
-    {% csrf_token %}
-    <input class="search" type="search" placeholder="Search">
-    <button>Search</button>
-</form>
+<div class ="searchContainer">
+    <form class="searchPart" method=POST action="{% url 'searchedPage' %}" >
+        {% csrf_token %}
+        <input class="search" type="search" placeholder="What are you looking for?" name="searched">
+        <button type="submit" class="submitButton">
+            <i class="fa fa-search"></i>
+        </button>
+     
+    </form>
+
+</div>
+
 <div class = contentContainer> 
     <div class="filter">
         <h1 class = filterCategory>Filter By</h1>
@@ -28,7 +37,7 @@
         </ol>
     </div>
     <div class = "inventory">
-        <h2 id="currentInv">Current Results</h2>
+        <h2 id="currentInv">Results</h2>
         <div class = partsGrid>
             {% for part_item in parts %}
                 {% include 'includes/part-details.html' with title=part_item.title partID=part_item.partID isAvailable=part_item.isAvailable image=part_item.image.url  %}
